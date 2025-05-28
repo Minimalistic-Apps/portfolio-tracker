@@ -1,3 +1,11 @@
+import { EvoluProvider } from "@evolu/react";
+import { AssetList } from "./AssetList.tsx";
+import { evolu } from "./evolu";
+
 export const App = () => {
-  return <>Hello</>;
+  return (
+    <EvoluProvider value={evolu}>
+      <AssetList />
+    </EvoluProvider>
+  );
 };
