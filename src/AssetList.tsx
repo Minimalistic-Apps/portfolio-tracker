@@ -1,4 +1,4 @@
-import { evolu, useEvolu } from "./evolu";
+import { evolu, useEvolu } from "./evolu.ts";
 import { useQuery } from "@evolu/react";
 
 const allAssetsQuery = evolu.createQuery((db) =>

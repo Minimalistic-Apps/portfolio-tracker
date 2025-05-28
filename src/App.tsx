@@ -1,11 +1,18 @@
 import { EvoluProvider } from "@evolu/react";
 import { AssetList } from "./AssetList.tsx";
-import { evolu } from "./evolu";
+import { evolu } from "./evolu.ts";
+import { Mnemonic } from "./Mnemonic.tsx";
 
-export const App = () => {
-  return (
-    <EvoluProvider value={evolu}>
-      <AssetList />
-    </EvoluProvider>
-  );
-};
+const _App = () => (
+  <>
+    <Mnemonic />
+    <hr />
+    <AssetList />
+  </>
+);
+
+export const App = () => (
+  <EvoluProvider value={evolu}>
+    <_App />
+  </EvoluProvider>
+);
