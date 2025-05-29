@@ -1,11 +1,10 @@
 import { createEvolu, getOrThrow, SimpleName } from "@evolu/common";
-import { evoluReactWebDeps } from "@evolu/react-web";
+import { evoluWebDeps } from "@evolu/web";
 import { Schema } from "./schema.ts";
-import { createUseEvolu } from "@evolu/react";
 
-export const evolu = createEvolu(evoluReactWebDeps)(Schema, {
+export const evolu = createEvolu(evoluWebDeps)(Schema, {
   name: getOrThrow(SimpleName.from("portfolio-tracker")),
-  syncUrl: "http://localhost:4000", // optional, defaults to https://evolu.world
+  syncUrl: "http://localhost:4000",
 });
 
 evolu.subscribeError(() => {
@@ -15,5 +14,3 @@ evolu.subscribeError(() => {
 
   console.error(error);
 });
-
-export const useEvolu = createUseEvolu(evolu);

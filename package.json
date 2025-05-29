@@ -13,8 +13,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "@evolu/common": "^5.4.0",
-    "@evolu/react": "^8.2.0",
-    "@evolu/react-web": "^1.0.0"
+    "@evolu/web": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
